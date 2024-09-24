@@ -1,24 +1,76 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timer {
+  max-width: 300px;
+}
 .flex-column {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+input {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  display: inline-block;
+  /* max-width: 360px; */
+  padding-left: 8px;
+}
+
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.get-data,
+.timer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.value {
+  font-size: 36px;
+  font-weight: 600;
 }
