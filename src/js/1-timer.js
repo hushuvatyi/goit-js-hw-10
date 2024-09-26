@@ -45,8 +45,7 @@ function changeTimerValues() {
     return;
   }
 
-  remainingTime = convertMs(remainingMs);
-  setTimer(remainingTime);
+  setTimer(convertMs(remainingMs));
 }
 
 function onClickStartHandler() {
@@ -54,49 +53,6 @@ function onClickStartHandler() {
   inputEl.setAttribute('disabled', '');
   intervalId = setInterval(changeTimerValues, 1000);
 }
-
-// iziToast.settings({
-//   timeout: 10000,
-//   resetOnHover: true,
-//   icon: 'material-icons',
-//   transitionIn: 'flipInX',
-//   transitionOut: 'flipOutX',
-//   position: 'topRight',
-//   onOpening: function () {
-//     console.log('callback abriu!');
-//   },
-//   onClosing: function () {
-//     console.log('callback fechou!');
-//   },
-// });
-
-// iziToast.settings({
-//   timeout: 200000,
-//   // closeOnClick: true,
-//   // closeOnEscape: true,
-//   close: true,
-//   progressBar: true,
-//   progressBarEasing: 'ease',
-//   //displayMode: 2,
-//   // pauseOnHover: false,
-//   // zindex: 900,
-//   // maxWidth: 400,
-//   // rtl: true,
-//   // layout: 2,
-//   // resetOnHover: true,
-//   imageWidth: 54,
-//   // balloon: true,
-//   // target: '.target',
-//   // icon: 'material-icons',
-//   // iconText: 'face',
-//   // animateInside: false,
-//   // transitionIn: 'flipInX',
-//   // transitionOut: 'fadeOutLeft',
-//   // titleSize: 20,
-//   // titleLineHeight: 20,
-//   // messageSize: 20,
-//   // messageLineHeight: 20,
-// });
 
 const options = {
   enableTime: true,
@@ -124,7 +80,6 @@ const options = {
 let selectedDate;
 let intervalId;
 let remainingMs;
-let remainingTime = {};
 
 const inputEl = document.querySelector('#datetime-picker');
 
